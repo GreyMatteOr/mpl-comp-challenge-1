@@ -51,16 +51,16 @@ header {
 
 main {
   width: 100%;
-
-  padding-top: 43px;
-  padding-bottom: 39px;
+}
+main > h2 {
+  padding: 43px 0px 39px 30px;
 }
 
 .card-grid{
-  width: 99%;
-  margin: 0px auto;
+  width: 100%;
+  padding-left: 17px;
   display: grid;
-  justify-content: center;
+  justify-content: left;
   grid-column-gap: 1%;
   grid-row-gap: 12px;
   grid-template-columns: repeat(auto-fill,277px);
@@ -78,6 +78,32 @@ main {
   height: 142px;
   width: 277px;
   background-color: purple;
+}
+
+.card-text{
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 14px 3fr 1fr 14px;
+  grid-row-gap: 21px;
+}
+
+.card-text>*>*{
+  border-color: red;
+  border-style: double;
+  text-align: left;
+}
+
+.card-text>*{;
+  display: inline-block;
+  grid-column: 2;
+  width: 250px;
+  border-color: yellow;
+  border-style: double;
+}
+
+.card-text .title-date{
+  padding-top: 19px;
+
 }
 
 @media screen and (max-width: 360px) {
