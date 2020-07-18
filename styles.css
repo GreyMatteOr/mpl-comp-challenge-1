@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:200,400,600);
+
 *,
 *:before,
 *:after {
@@ -8,36 +10,43 @@
 }
 
 body {
-  background: grey;
+  background: #5e7d51;
+}
+
+body *{
+  font-family: 'Titillium Web', sans-serif;
+  color: #2B2522;
 }
 
 header {
   display: grid;
-  grid-template-rows: .813rem 1fr 1fr 2.25rem;
-  grid-template-columns: 1.688rem 12.5rem 1fr 10.25rem 1.75rem;
-  height: 9.25rem;
-  background-color: lightgrey;
+  grid-template-rows: .813em 1fr 1fr 2.25em;
+  grid-template-columns: 1.688em 12.5em 1fr 10.25em 1.75em;
+  height: 9.25em;
+  background-color: #41281F;
 }
 
 .right-nav-grid{
   display: grid;
-  grid-template-rows: .813rem 1fr 1fr 2.25rem;
-  height: 9.25rem;
-  border-color: blue;
-  border-style: double;
+  grid-template-rows: .813em 1fr 1fr 2.25em;
+  height: 9.25em;
+  /* border-color: blue; */
+  /* border-style: double; */
   grid-column: 4;
 }
 
 #r-1{
   grid-row: 2;
-  border-color: blue;
-  border-style: double;
+  color: #8bc34a;
+  /* border-color: #8bc34a; */
+  /* border-style: double; */
 }
 
 #r-2{
   grid-row: 3;
-  border-color: blue;
-  border-style: double;
+  color: #D8C5B9;
+  /* border-color: #D8C5B9; */
+  /* border-style: double; */
 }
 
 .ll-nav-grid{
@@ -45,38 +54,45 @@ header {
   grid-column: 2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-color: blue;
-  border-style: double;
+  /* border-color: blue; */
+  /* border-style: double; */
+}
+
+.ll-nav-grid *{
+  color: #D8C5B9;
 }
 
 main {
   width: 100%;
 }
 main > h2 {
-  padding: 1.792rem 0px 1.625rem 1.25rem;
+  color: #2B2522;
+  padding: 1.792em 0px 1.625em 1.25em;
 }
 
 .card-grid{
   width: 100%;
-  padding-left: 1.063rem;
+  padding: 1.063em 1.063em;
   display: grid;
   justify-content: left;
-  grid-column-gap: .625rem;
-  grid-row-gap: .75rem;
-  grid-template-columns: repeat(auto-fill,17.318rem);
-  border-color: green;
-  border-style: double;
+  grid-column-gap: .625em;
+  grid-row-gap: .75em;
+  grid-template-columns: repeat(auto-fill,17.318em);
+  background: #e2c9ab;
+  /* border-color: green; */
+  /* border-style: double; */
 }
 
 .card{
   display: grid;
-  border-color: purple;
-  border-style: dashed;
+  background-color: #bdcc91;
+  /* border-color: purple; */
+  /* border-style: dashed; */
 }
 
 .card img{
-  height: 8.875rem;
-  width: 17.318rem;
+  height: 8.875em;
+  width: 17.318em;
   background-color: purple;
 }
 
@@ -86,45 +102,59 @@ main > h2 {
 }
 
 .card-text>*>*{
-  border-color: red;
-  border-style: double;
+  /* border-color: red; */
+  /* border-style: double; */
   text-align: left;
 }
 
 .card-text>*{;
   display: inline-block;
   grid-column: 2;
-  width: 15rem;
-  border-color: yellow;
-  border-style: double;
+  width: 15em;
+  /* border-color: yellow; */
+  /* border-style: double; */
 }
 
-.card-text .title-date{
-  padding-top: 1.188rem;
+.title-date{
+  padding-top: 1.188em;
 }
 
-.card-text .colorful-number{
-  padding-bottom: 1.188rem;
+.p-link{
+  padding: .75em .5em .75em .5em;
+  background-color: #c2755b;
+}
+
+.p-link a{
+  color: #e2c9ab;
+}
+
+.colorful-number{
+  padding-bottom: 1.188em;
 }
 
 .title-date h4,
 .playlist p,
 .colorful-number p{
-  margin-bottom: .25rem;
+  margin-bottom: .25em;
 }
 
-@media screen and (max-width: 610px) {
+.big-number{
+  font-size: 2em;
+  color: #0CA889;
+}
+
+@media screen and (max-width: 38.125em) {
   body *{
     justify-content: center;
   }
 
   header{
     width: 100%;
-    min-width: 20rem;
-    grid-template-rows: 1rem 1fr 1fr 1rem;
-    grid-template-columns: 1.688rem 1fr 1.688rem;
-    border-color: black;
-    border-style: double;
+    min-width: 20em;
+    grid-template-rows: 1em 1fr 1fr 1em;
+    grid-template-columns: 1.688em 1fr 1.688em;
+    /* border-color: black; */
+    /* border-style: double; */
   }
 
   .right-nav-grid{
@@ -153,15 +183,23 @@ main > h2 {
     height: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    border-color: red;
-    border-style: double;
+    /* border-color: red; */
+    /* border-style: double; */
   }
 
   .card-grid{
-    width: 20rem;
+    width: 20em;
   }
 
   .card img{
     background-color: red;
+  }
+}
+
+@media screen and (min-width: 74.3125em) {
+  body{
+    background-color: green;
+    font-size: $base-font-size*1.2;
+    line-height: $base-line-height*1.2;
   }
 }
