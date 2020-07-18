@@ -13,16 +13,16 @@ body {
 
 header {
   display: grid;
-  grid-template-rows: 13px 1fr 1fr 36px;
-  grid-template-columns: 27px 200px 10fr 164px 28px;
-  height: 148px;
+  grid-template-rows: .813rem 1fr 1fr 2.25rem;
+  grid-template-columns: 1.688rem 12.5rem 1fr 10.25rem 1.75rem;
+  height: 9.25rem;
   background-color: lightgrey;
 }
 
 .right-nav-grid{
   display: grid;
-  grid-template-rows: 13px 1fr 1fr 36px;
-  height: 148px;
+  grid-template-rows: .813rem 1fr 1fr 2.25rem;
+  height: 9.25rem;
   border-color: blue;
   border-style: double;
   grid-column: 4;
@@ -53,17 +53,17 @@ main {
   width: 100%;
 }
 main > h2 {
-  padding: 43px 0px 39px 30px;
+  padding: 1.792rem 0px 1.625rem 1.25rem;
 }
 
 .card-grid{
   width: 100%;
-  padding-left: 17px;
+  padding-left: 1.063rem;
   display: grid;
   justify-content: left;
-  grid-column-gap: 1%;
-  grid-row-gap: 12px;
-  grid-template-columns: repeat(auto-fill,277px);
+  grid-column-gap: .625rem;
+  grid-row-gap: .75rem;
+  grid-template-columns: repeat(auto-fill,17.318rem);
   border-color: green;
   border-style: double;
 }
@@ -71,20 +71,18 @@ main > h2 {
 .card{
   display: grid;
   border-color: purple;
-  border-style: double;
+  border-style: dashed;
 }
 
 .card img{
-  height: 142px;
-  width: 277px;
+  height: 8.875rem;
+  width: 17.318rem;
   background-color: purple;
 }
 
 .card-text{
   display: grid;
   grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: 14px 3fr 1fr 14px;
-  grid-row-gap: 21px;
 }
 
 .card-text>*>*{
@@ -96,28 +94,43 @@ main > h2 {
 .card-text>*{;
   display: inline-block;
   grid-column: 2;
-  width: 250px;
+  width: 15rem;
   border-color: yellow;
   border-style: double;
 }
 
 .card-text .title-date{
-  padding-top: 19px;
-
+  padding-top: 1.188rem;
 }
 
-@media screen and (max-width: 360px) {
-  .header{
-    width: 320px;
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+.card-text .colorful-number{
+  padding-bottom: 1.188rem;
+}
+
+.title-date h4,
+.playlist p,
+.colorful-number p{
+  margin-bottom: .25rem;
+}
+
+@media screen and (max-width: 610px) {
+  body *{
+    justify-content: center;
+  }
+
+  header{
+    width: 100%;
+    min-width: 20rem;
+    grid-template-rows: 1rem 1fr 1fr 1rem;
+    grid-template-columns: 1.688rem 1fr 1.688rem;
+    border-color: black;
+    border-style: double;
   }
 
   .right-nav-grid{
     grid-column: 2;
     grid-row: 2;
-    height: 50%;
-    width: 90%;
+    height: 70%;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
     display: grid;
@@ -136,8 +149,8 @@ main > h2 {
   .ll-nav-grid{
     grid-column: 2;
     grid-row: 3;
-    width: 90%;
-    height: 50%;
+    width: 100%;
+    height: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border-color: red;
@@ -145,7 +158,7 @@ main > h2 {
   }
 
   .card-grid{
-    width: 320px;
+    width: 20rem;
   }
 
   .card img{
