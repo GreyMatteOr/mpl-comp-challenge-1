@@ -90,7 +90,7 @@ header {
   grid-column: 2;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: .5em;
+  grid-column-gap: .75em;
   /* border-color: blue; */
   /* border-style: double; */
 }
@@ -147,11 +147,23 @@ main > h2 {
   background-color: #bdcc91;
   box-shadow: 1px 1px 3px 1px #7d5d36;
 }
-
+.card-img{
+  position: relative;
+}
 .card img{
+  position: relative;
+  z-index: 1;
   height: 8.875em;
   width: 17.318em;
-  background-color: purple;
+}
+
+img.click-icon{
+  position: absolute;
+  z-index: 2;
+  top: .75em;
+  left: 0;
+  height: 3.8125em;
+  width: auto;
 }
 
 .card-text{
@@ -268,7 +280,7 @@ main > h2 {
   }
 
   .card{
-    width: 98%;
+    width: 96%;
   }
 
   .card img{
@@ -276,6 +288,13 @@ main > h2 {
     height: auto;
     min-width: 20em;
     min-height: 10em;
+  }
+
+  img.click-icon{;
+    height: 3.8125em;
+    width: auto;
+    min-width: 0;
+    min-height: 0;
   }
 
   .card-text{
