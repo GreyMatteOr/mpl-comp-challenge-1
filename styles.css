@@ -33,8 +33,9 @@ header {
 
 #r-1{
   grid-row: 2;
-  display: flex;
-  justify-content: flex-end;
+  display: grid;
+  justify-content: right;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
   height: auto;
   width: 19.25em;
   padding: .25em 0;
@@ -42,16 +43,20 @@ header {
   /* border-style: double; */
 }
 
+#r-1 #profile-pic{
+  grid-column: 2;
+  width: 3em;
+}
+
 #r-1 nav{
+  padding-left: .5em;
+  grid-column: 3;
   color: #8bc34a;
   text-align: right;
 }
 
-#r-1 #profile-pic{
-  width: 3em;
-}
-
 #r-1 #arrow{
+  grid-column: 4;
   width: 1em;
 }
 
@@ -80,20 +85,40 @@ header {
 }
 
 .ll-nav-grid{
+  padding-top: 2em;
   grid-row: 3;
   grid-column: 2;
   display: grid;
-  grid-template-columns: 1fr 1fr .5em 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: .5em;
   /* border-color: blue; */
   /* border-style: double; */
 }
 
-.ll-nav-grid *{
+#ll-1,
+#ll-2,
+#ll-3{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#ll-1 img,
+#ll-2 img,
+#ll-3 img{
+  height: 1.2em;
+}
+
+#ll-1 nav{
   color: #D8C5B9;
 }
 
+#ll-2 nav,
+#ll-3 nav{
+  color: #be8641;
+}
+
 #ll-3{
-  grid-column: 4;
+  grid-column: 3;
 }
 
 main {
@@ -120,6 +145,7 @@ main > h2 {
 .card{
   display: grid;
   background-color: #bdcc91;
+  box-shadow: 1px 1px 3px 1px #7d5d36;
 }
 
 .card img{
@@ -214,6 +240,7 @@ main > h2 {
     padding: 0;
     grid-row: 1;
     grid-column: 2;
+    grid-template-columns: repeat(5, 1fr);
   }
 
   #r-2{
@@ -223,17 +250,13 @@ main > h2 {
   }
 
   .ll-nav-grid{
+    padding: 0;
     grid-column: 2;
     grid-row: 4;
     width: 100%;
     height: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* border-color: red; */
-    /* border-style: double; */
-  }
-  #ll-3{
-      grid-column: 3;
   }
 
   main{
