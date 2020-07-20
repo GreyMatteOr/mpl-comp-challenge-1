@@ -147,6 +147,7 @@ main > h2 {
   background-color: #bdcc91;
   box-shadow: 1px 1px 3px 1px #7d5d36;
 }
+
 .card-img{
   position: relative;
 }
@@ -180,10 +181,14 @@ img.click-icon{
 }
 
 .card-text{
+  padding-top: .625em;
+  margin-bottom: 1em;
   display: grid;
   grid-template-columns: .625em 1fr 1.825em;
-  grid-template-rows: .625em 3em 1.5em 3em 1.5em 3em 1.5em 3em 2.5em;
+  grid-template-rows: repeat(4, 1fr);
+  grid-row-gap: 1.3125em;
   width: 17.318em;
+  height: 16.0625em;
   justify-content: flex-start;
 }
 
@@ -194,20 +199,18 @@ img.click-icon{
 }
 
 .card-text>*{;
-  margin:0 0 0 .625em;
   display: inline-block;
   grid-column: 2;
   width: 100%;
 }
 
 .title-date{
-  padding-top: 1.188em;
-  grid-row: 2;
+  grid-row: 1;
 }
 
 .p-link{
   padding: .75em .5em .75em .5em;
-  grid-row: 4;
+  grid-row: 2;
   width: 15em;
   height: 3.5em;
   background-color: #c2755b;
@@ -218,12 +221,12 @@ img.click-icon{
 }
 
 .playlist{
-  grid-row: 6;
+  grid-row: 3;
 }
 
 .colorful-number{
   margin-bottom: 1.188em;
-  grid-row: 8;
+  grid-row: 4;
 }
 
 .title-date h4,
